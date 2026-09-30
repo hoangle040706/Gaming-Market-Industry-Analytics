@@ -4,34 +4,34 @@
 
 ---
 
-## 📌 Trạng Thái Tiến Độ Dự Án (Project Progress)
+## Trạng Thái Tiến Độ Dự Án (Project Progress)
 
 > **Cột mốc hiện tại (Current Milestone):**  
-> 📍 **GIAI ĐOẠN 1: Thu thập, Khảo sát & Đặc tả 5 Tập Dữ liệu Hoàn tất (10.757 bản ghi)**  
+> **GIAI ĐOẠN 1: Thu thập, Khảo sát & Đặc tả 5 Tập Dữ liệu Hoàn tất (10.757 bản ghi)**  
 > *(Các giai đoạn tiếp theo sẽ được cập nhật liên tục theo tiến độ thực hiện đồ án)*
 
 ```
-[✅ Bước 1: Xác định Đề tài & Thu thập Dataset]
+[Bước 1: Xác định Đề tài & Thu thập Dataset (Hoàn thành)]
                          │
                          ▼
-[⏳ Bước 2: Tiền xử lý Dữ liệu & Chuẩn hóa Đa chiều (ETL Pipeline)]
+[Bước 2: Tiền xử lý Dữ liệu & Chuẩn hóa Đa chiều (ETL Pipeline)]
                          │
                          ▼
-[⏳ Bước 3: Phân tích Khám phá Dữ liệu (Exploratory Data Analysis - EDA)]
+[Bước 3: Phân tích Khám phá Dữ liệu (Exploratory Data Analysis - EDA)]
                          │
                          ▼
-[⏳ Bước 4: Xây dựng Dashboard Tương tác (Power BI / Tableau)]
+[Bước 4: Xây dựng Dashboard Tương tác (Power BI / Tableau)]
                          │
                          ▼
-[⏳ Bước 5: Mô hình Hồi quy Tuyến tính Dự báo Thị trường đến 2030]
+[Bước 5: Mô hình Hồi quy Tuyến tính Dự báo Thị trường đến 2030]
                          │
                          ▼
-[⏳ Bước 6: Hoàn thiện Báo cáo IEEE & Video Demo Vấn đáp]
+[Bước 6: Hoàn thiện Báo cáo IEEE & Video Demo Vấn đáp]
 ```
 
 ---
 
-## ⚙️ Thể Loại & Định Vị Dự Án (Project Type Flags)
+## Thể Loại & Định Vị Dự Án (Project Type Flags)
 
 - [x] **Thu thập & Tích hợp Dữ liệu Đa nguồn (Multi-Source Data Sourcing)**
 - [x] **Đặc tả Từ điển Dữ liệu (Data Dictionary & Metadata Profiling)**
@@ -43,7 +43,7 @@
 
 ---
 
-## 📑 Mục Lục (Table of Contents)
+## Mục Lục (Table of Contents)
 
 1. [Tổng Quan Đề Tài (Project Overview)](#1-tổng-quan-đề-tài-project-overview)
 2. [Câu Hỏi Nghiên Cứu & Mục Tiêu (Research Questions & Objectives)](#2-câu-hỏi-nghiên-cứu--mục-tiêu-research-questions--objectives)
@@ -69,7 +69,7 @@
 
 ## 2. Câu Hỏi Nghiên Cứu & Mục Tiêu (Research Questions & Objectives)
 
-### 🎯 5 Câu Hỏi Nghiên Cứu Cốt Lõi (Core Research Questions)
+### 5 Câu Hỏi Nghiên Cứu Cốt Lõi (Core Research Questions)
 
 1. **RQ1 (Sự Dịch chuyển Thị phần - Macro Market Shift):** Cơ cấu thị phần doanh số và quy mô doanh thu toàn cầu giữa PC, Console và Mobile đã biến đổi như thế nào từ 1980 đến 2025 dưới tác động của các cột mốc công nghệ (Console Next-Gen, Kỷ nguyên Smartphone bùng nổ, Đại dịch COVID-19)?
 2. **RQ2 (Chiến địa Thể loại - Genre Battlefield):** Nền tảng nào nắm giữ vị thế "thống trị độc tôn" ở từng thể loại game cụ thể? Thể loại nào là chiến trường cạnh tranh gay gắt nhất giữa cả 3 bên?
@@ -81,7 +81,7 @@
 
 ## 3. Phạm Vi & Công Cụ Nghiên Cứu (Scope & Tools)
 
-### 📌 Phạm vi Nghiên cứu (Scope Definition)
+### Phạm vi Nghiên cứu (Scope Definition)
 
 | Chiều phân tích | Chi tiết trong phạm vi (In Scope) | Ngoài phạm vi (Out of Scope) |
 |---|---|---|
@@ -90,7 +90,7 @@
 | **Quy mô dữ liệu** | **10.757 bản ghi** từ 5 tập dữ liệu | Dữ liệu phần cứng máy tính cá nhân chi tiết (GPU/CPU specs) |
 | **Đơn vị phân tích** | Cấp độ tựa game (`Game_Title`), cấp độ thể loại (`Genre`), cấp độ khu vực địa lý (`Region`) | Phân tích cảm xúc từng dòng bình luận người dùng (Sentiment text mining) |
 
-### 🛠️ Công Cụ & Công Nghệ Sử Dụng (Tools & Technologies)
+### Công Cụ & Công Nghệ Sử Dụng (Tools & Technologies)
 
 * **Ngôn ngữ lập trình:** Python 3.11+
 * **Thư viện Thu thập & Xử lý:** Requests, Beautiful Soup, Google Play Scraper, Pandas, NumPy
@@ -163,7 +163,7 @@ Dự án đã hoàn tất việc khảo sát và thu thập **5 tập dữ liệ
 
 ### 5.2. Đặc Tả Schema & Các Trường Cốt Lõi (Raw Schema Summary)
 
-#### 🎮 Tập 1: Console Dataset (`vgchartz_games.csv` - 4.000 dòng, 19 cột)
+#### Tập 1: Console Dataset (`vgchartz_games.csv` - 4.000 dòng, 19 cột)
 * **Khóa chính:** `Pos` (Hạng phân phối) + `Game` (Tên game) + `Platform` (Hệ máy)
 * **Các trường dữ liệu quan trọng:**
   * `Game`: Tên tựa trò chơi (chuỗi ký tự).
@@ -174,7 +174,7 @@ Dự án đã hoàn tất việc khảo sát và thu thập **5 tập dữ liệ
   * `Critic Score` & `User Score`: Điểm đánh giá của giới phê bình và game thủ (thang 10).
   * `Release Year`: Năm phát hành (1971 – 2025).
 
-#### 💻 Tập 2: PC Steam Dataset (`steamspy_games_4000.csv` - 4.000 dòng, 23 cột)
+#### Tập 2: PC Steam Dataset (`steamspy_games_4000.csv` - 4.000 dòng, 23 cột)
 * **Khóa chính:** `appid` (Định danh duy nhất trên Steam)
 * **Các trường dữ liệu quan trọng:**
   * `name`: Tên thương mại tựa game trên Steam.
@@ -186,7 +186,7 @@ Dự án đã hoàn tất việc khảo sát và thu thập **5 tập dữ liệ
   * `ccu`: Lượng người chơi đồng thời cao nhất (Peak Concurrent Users).
   * `average_forever` & `median_forever`: Thời gian chơi trung bình và trung vị trọn đời (phút).
 
-#### 📱 Tập 3: Mobile Google Play Dataset (`mobile_playstore_games_2000+.csv` - 2.720 dòng, 23 cột)
+#### Tập 3: Mobile Google Play Dataset (`mobile_playstore_games_2000+.csv` - 2.720 dòng, 23 cột)
 * **Khóa chính:** `app_id` (Định danh package ứng dụng Android)
 * **Các trường dữ liệu quan trọng:**
   * `title`: Tên tựa game di động.
@@ -197,7 +197,7 @@ Dự án đã hoàn tất việc khảo sát và thu thập **5 tập dữ liệ
   * `price_usd` & `is_free`: Giá tải ban đầu và cờ xác định tải miễn phí.
   * `offersIAP`: Cờ xác định trò chơi có tính năng In-App Purchases (nạp tiền trong game).
 
-#### 🌐 Tập 4 & 5: Dữ Liệu Chuẩn Vĩ Mô (Benchmarks & Geography)
+#### Tập 4 & 5: Dữ Liệu Chuẩn Vĩ Mô (Benchmarks & Geography)
 * `genre_revenue_2024_2025.csv`: Doanh thu toàn cầu (tỷ USD) của 12 thể loại game chính (Action, RPG, Strategy, Casual,...).
 * `revenue_by_region(2021 - 2025).csv`: Doanh thu, tỷ trọng (%) và tốc độ tăng trưởng YoY của 5 khu vực địa lý: **APAC, NA, EU, LATAM, MENA** trong chuỗi 5 năm liên tiếp.
 
@@ -228,15 +228,15 @@ Dự án áp dụng mô hình phân chia theo **Trục Dọc Nền Tảng (Verti
 
 ```mermaid
 graph LR
-    subgraph S1["📍 Bước Hiện Tại"]
+    subgraph S1["Bước Hiện Tại"]
         D1["Hoàn thành Sourcing<br>5 Datasets (10.757 dòng)"]
     end
 
-    subgraph S2["⏳ Bước Tiếp Theo"]
+    subgraph S2["Bước Tiếp Theo"]
         D2["Xây dựng Python ETL<br>& Kiểm thử Dữ liệu"]
     end
 
-    subgraph S3["⏳ Các Bước Sắp Tới"]
+    subgraph S3["Các Bước Sắp Tới"]
         D3["Jupyter Notebook EDA<br>& Trích xuất Insights"]
         D4["Dựng Dashboard 4 Tab<br>Power BI / Tableau"]
         D5["Mô hình Hồi quy Tuyến tính<br>Dự báo 2026-2030"]
@@ -252,4 +252,4 @@ graph LR
 
 ---
 
-> 📝 *README này được khởi tạo tại mốc hoàn tất thu thập Dataset. Nội dung sẽ được cập nhật liên tục qua từng giai đoạn hoàn thiện của đồ án.*
+> *README này được khởi tạo tại mốc hoàn tất thu thập Dataset. Nội dung sẽ được cập nhật liên tục qua từng giai đoạn hoàn thiện của đồ án.*
