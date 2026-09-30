@@ -117,16 +117,17 @@ Gaming-Market-Industry-Analytics/
 │   ├── project_master_plan.md# Kế hoạch chi tiết phân kỳ đồ án
 │   └── team_work_allocation.md# Bản phân chia công việc 3 thành viên
 │
-├── notebooks/                # Jupyter Notebooks phục vụ EDA và thử nghiệm mô hình
+├── notebooks/                # Jupyter Notebooks phục vụ ETL, EDA và thử nghiệm mô hình
+│   ├── etl/                  # Pipeline tiền xử lý & làm sạch dữ liệu các nền tảng
+│   │   ├── 01_etl_pc.ipynb
+│   │   ├── 02_etl_console.ipynb
+│   │   ├── 03_etl_mobile.ipynb
+│   │   └── 04_etl_master_pipeline.ipynb
 │   ├── 01_eda_exploration.ipynb
 │   └── 02_predictive_modeling.ipynb
 │
-├── scripts/                  # Kịch bản Python ETL & Pipeline kiểm thử
-│   ├── etl_pc.py             # Pipeline làm sạch dữ liệu PC Steam
-│   ├── etl_console.py        # Pipeline làm sạch dữ liệu Console VGChartz
-│   ├── etl_mobile.py         # Pipeline làm sạch dữ liệu Mobile Google Play
-│   ├── etl_pipeline.py       # Tích hợp Master Dataset đa nền tảng
-│   └── validate_data.py      # Kiểm tra tính toàn vẹn và chất lượng dữ liệu
+├── scripts/                  # Kịch bản Python tự động hóa & kiểm thử
+│   └── validate_data.py
 │
 ├── dashboard/                # File thiết kế Dashboard tương tác (Power BI / Tableau)
 │   └── powerbi/
