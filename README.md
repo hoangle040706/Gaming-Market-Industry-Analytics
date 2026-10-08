@@ -35,8 +35,8 @@
 
 - [x] **Thu thập & Tích hợp Dữ liệu Đa nguồn (Multi-Source Data Sourcing)**
 - [x] **Đặc tả Từ điển Dữ liệu (Data Dictionary & Metadata Profiling)**
-- [ ] Tiền xử lý & Chuẩn hóa Chỉ số (Data Cleaning & Harmonization ETL)
-- [ ] Phân tích Khám phá Dữ liệu (Exploratory Data Analysis - EDA)
+- [x] Tiền xử lý & Chuẩn hóa Chỉ số (Data Cleaning & Harmonization ETL)
+- [x] Phân tích Khám phá Dữ liệu (Exploratory Data Analysis - EDA)
 - [ ] Thiết kế Dashboard Trực quan Tương tác (Interactive BI Dashboard)
 - [ ] Dự báo Chuỗi thời gian (Linear Regression Forecasting 2026–2030)
 - [ ] Báo cáo Nghiên cứu Chuẩn IEEE (Final Academic Report)
