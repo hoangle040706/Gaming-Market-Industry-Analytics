@@ -1,14 +1,3 @@
-"""
-Incrementally crawl SteamSpy PC games to exactly 15,000 unique appids.
-
-Features:
-- Fast page skipping: Skips already crawled candidate pages instantly without 60s sleep.
-- Clear console progress logging with flush=True.
-- Checkpoints saved every 100 games.
-- Resumes automatically from current row count to 15,000 rows.
-- Keeps only games with a known release year before 2026.
-"""
-
 import os
 import sys
 import time
