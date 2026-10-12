@@ -1,13 +1,3 @@
-"""
-Incrementally crawl SteamSpy PC games to exactly 15,000 unique appids.
-
-Features:
-- Fast page skipping: Skips already crawled candidate pages instantly without 60s sleep.
-- Clear console progress logging with flush=True.
-- Checkpoints saved every 100 games.
-- Resumes automatically from current row count to 15,000 rows.
-"""
-
 import os
 import sys
 import time
@@ -24,6 +14,7 @@ EXISTING_FILE = os.path.join(PROJECT_ROOT, "data", "raw", "steamspy_games_4000.c
 OUTPUT_FILE = os.path.join(PROJECT_ROOT, "data", "raw", "steamspy_games_15000_from_4000.csv")
 
 TARGET_ROWS = 15_000
+MAX_RELEASE_YEAR_EXCLUSIVE = 2026
 STEAMSPY_URL = "https://steamspy.com/api.php"
 ALL_REQUEST_DELAY_SECONDS = 60
 DETAIL_REQUEST_DELAY_SECONDS = 1
@@ -44,6 +35,7 @@ def load_data() -> pd.DataFrame:
 
     df["appid"] = pd.to_numeric(df["appid"], errors="coerce")
     df = df.dropna(subset=["appid"]).drop_duplicates("appid", keep="first")
+    df = filter_pre_2026_games(df)
     print(f"[INFO] Da nạp sẵn {len(df):,} dong tu {source}", flush=True)
     return df.reset_index(drop=True)
 
@@ -51,6 +43,25 @@ def load_data() -> pd.DataFrame:
 def save_checkpoint(df: pd.DataFrame) -> None:
     df.to_csv(OUTPUT_FILE, index=False, encoding="utf-8-sig")
     print(f"[CHECKPOINT] Da luu: {len(df):,} dong vao {OUTPUT_FILE}", flush=True)
+
+
+def filter_pre_2026_games(df: pd.DataFrame) -> pd.DataFrame:
+    """Keep only rows whose known release year is earlier than 2026."""
+    if "release_year" not in df.columns:
+        raise ValueError("Missing required column 'release_year'")
+
+    years = pd.to_numeric(df["release_year"], errors="coerce")
+    valid = years.notna() & years.lt(MAX_RELEASE_YEAR_EXCLUSIVE)
+    filtered = df.loc[valid].copy()
+    filtered["release_year"] = years.loc[valid].astype(int)
+    removed = len(df) - len(filtered)
+    if removed:
+        print(
+            f"[INFO] Bo qua {removed:,} dong khong co nam phat hanh hop le "
+            f"(< {MAX_RELEASE_YEAR_EXCLUSIVE}).",
+            flush=True,
+        )
+    return filtered
 
 
 def main() -> None:
@@ -108,7 +119,17 @@ def main() -> None:
             if not isinstance(detail, dict) or not detail.get("name"):
                 continue
 
+            release_year = pd.to_numeric(detail.get("release_year"), errors="coerce")
+            if pd.isna(release_year) or release_year >= MAX_RELEASE_YEAR_EXCLUSIVE:
+                print(
+                    f"   Bo qua appid={appid}: release_year={detail.get('release_year')!r} "
+                    f"(can nam < {MAX_RELEASE_YEAR_EXCLUSIVE})",
+                    flush=True,
+                )
+                continue
+
             detail["appid"] = int(appid)
+            detail["release_year"] = int(release_year)
             new_rows.append(detail)
             existing_appids.add(appid)
 
